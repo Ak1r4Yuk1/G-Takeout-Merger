@@ -8,8 +8,9 @@ from datetime import datetime
 from pathlib import Path
 
 # 📂 Configura i percorsi
-takeout_root = "/home/akira/Scaricati"
-output_root = "/home/akira/Scaricati/GoogleFotoUnificati"
+home = os.path.expanduser("~")
+takeout_root = os.path.join(home, "Scaricati")
+output_root = os.path.join(takeout_root, "GoogleFotoUnificati")
 os.makedirs(output_root, exist_ok=True)
 
 # 📸 Estensioni supportate
